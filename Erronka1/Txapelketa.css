@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+h1 {
+    text-align: center;
+    font-size: 500%;
+    font-family: fantasy;
+}
+.e {
+    color: white;
+}
+.sports {
+    color: red;
+}
+.Txapelketa{
+    color: white;
+}
+
+.esports{
+    margin-left: 0px;
+    margin-right: 1600px;
+    width: 800px;
+    height: 360px;
+}
+img {
+    margin-left: 1000px;
+    margin-right: 0px;
+    width: 600px;
+    height: 250px;
+    margin-top: -200px;
+}
