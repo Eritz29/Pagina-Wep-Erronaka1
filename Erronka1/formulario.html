@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Harremanetarako formularioa </title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+    <h1>Harremanetarako formularioa</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="nombre">Izena:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Helbide elektronikoa:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="opcion">Aukeratu eskaera mota:</label>
+        <select id="opcion" name="opcion" required>
+            <option value="">-- Aukeratu --</option>
+            <option value="informazioa">Informazioa eskatu</option>
+            <option value="parte_hartu">Txapelketan parte hartu</option>
+        </select><br><br>
+
+        <label for="mensaje">Mezua:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" minlength="10" maxlength="500" required></textarea><br><br>
+
+        <input type="submit" value="Bidali">
+    </form>

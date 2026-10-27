@@ -1,0 +1,253 @@
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background-color: #111111;
+}
+
+body {
+    margin: 0;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    min-height: 100vh;
+}
+
+/* Título */
+h1 {
+    text-align: left;
+    font-size: clamp(30px, 4vw, 65px);
+    font-family: fantasy;
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.e {
+    color: white;
+}
+
+.sports {
+    color: red;
+}
+
+.Txapelketa {
+    color: white;
+}
+
+/* Cabecera */
+header {
+    min-height: 100px;
+    height: 100px;
+    background-color: #aaaaaa;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Logo de la cabecera */
+header img {
+    width: 150px;
+    max-width: 20%;
+    height: 140px;
+    object-fit: contain;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: #999999;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+nav a {
+    background-color: white;
+    padding: 7px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+main {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido {
+    display: grid;
+    flex: 1;
+    min-height: 55vh;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 12px;
+    margin-top: 8px;
+    background-color: #bbbbbb;
+}
+
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 1fr 1fr 2fr;
+    gap: 30px;
+}
+
+article{
+    padding: 10px;
+    background-color: #999999;
+    min-height: 0;
+    align-items: center;
+    font-size: 19px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    background-color: #eeeeee;
+    padding: 5px;
+    margin: 8px 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: #111111;
+    color: white;
+    padding: 15px 20px 10px;
+    margin-top: 8px;
+    border-top: 1px solid #444444;
+    border-radius: 8px;
+    height: auto;
+}
+
+/* Contenido del pie de página */
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 25px;
+    padding-bottom: 12px;
+    align-items:start;
+}
+
+/* Zona de noticias */
+.zona-noticias {
+    min-width: 0;
+}
+
+/* Columnas Explorar e Información */
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* Títulos del pie de página */
+footer h3 {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Enlaces del pie de página */
+.footer-contact a,
+.footer-enlaces a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+.footer-contact a:hover,
+.footer-enlaces a:hover {
+    color: #E31837;
+}
+
+/* Campo del correo */
+.zona-noticias input[type="email"] {
+    width: 250px;
+    max-width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Botón de suscripción */
+.zona-noticias button {
+    background-color: #E31837;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.zona-noticias button:hover {
+    background-color: #a80f27;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.social-icons a {
+    opacity: 0.85;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+/* Franja inferior */
+.footer-final {
+    border-top: 1px solid #555555;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 10px;
+}
+
+.footer-final p {
+    margin: 5px 0;
+}
+
+.footer-final a {
+    color: #eeeeee;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

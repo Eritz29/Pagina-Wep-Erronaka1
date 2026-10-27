@@ -1,0 +1,512 @@
+/*plantilla.css klasifikazioa*/
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background-color: #111111;
+}
+
+body {
+    margin: 0;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Título */
+h1 {
+    text-align: left;
+    font-size: clamp(30px, 4vw, 65px);
+    font-family: fantasy;
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.e {
+    color: white;
+}
+
+.sports {
+    color: red;
+}
+
+.Txapelketa {
+    color: white;
+}
+
+/* Cabecera */
+header {
+    min-height: 100px;
+    height: 100px;
+    background-color: #aaaaaa;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Logo de la cabecera */
+header img {
+    width: 150px;
+    max-width: 20%;
+    height: 140px;
+    object-fit: contain;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: #999999;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+nav a {
+    background-color: white;
+    padding: 7px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Pie de página */
+footer {
+    background-color: #111111;
+    color: white;
+    padding: 15px 20px 10px;
+    margin-top: 8px;
+    border-top: 1px solid #444444;
+    border-radius: 8px;
+    height: auto;
+}
+
+/* Contenido del pie de página */
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 25px;
+    padding-bottom: 12px;
+    align-items: start;
+}
+
+/* Zona de noticias */
+.zona-noticias {
+    min-width: 0;
+}
+
+/* Columnas Explorar e Información */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* Títulos del pie de página */
+footer h3 {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Enlaces del pie de página */
+.footer-contact a,
+.footer-enlaces a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+.footer-contact a:hover,
+.footer-enlaces a:hover {
+    color: #E31837;
+}
+
+/* Campo del correo */
+.zona-noticias input[type="email"] {
+    width: 250px;
+    max-width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Botón de suscripción */
+.zona-noticias button {
+    background-color: #E31837;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.zona-noticias button:hover {
+    background-color: #a80f27;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.social-icons a {
+    opacity: 0.85;
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+/* Franja inferior */
+.footer-final {
+    border-top: 1px solid #555555;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 10px;
+}
+
+.footer-final p {
+    margin: 5px 0;
+}
+
+.footer-final a {
+    color: #eeeeee;
+}
+
+/* Adaptación del pie de página a móviles */
+@media (max-width: 600px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+}
+
+/* Cabecera */
+header {
+    height: 150px;
+    background-color: #aaaaaa;
+    padding: 20px;
+    text-align: right;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #999999;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+nav a {
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+.contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #bbbbbb;
+}
+
+/* Artículos y columnas laterales */
+article,
+aside {
+    padding: 15px;
+    background-color: #999999;
+    min-height: 140px;
+}
+
+article p,
+aside p {
+    background-color: #eeeeee;
+    padding: 5px;
+}
+
+/* Pie de página */
+footer {
+    height: 150px;
+    background-color: #aaaaaa;
+    padding: 20px;
+}
+img {
+    max-width: 100%;
+    height: 100px;
+    width: 150px
+}
+
+/*klasifikazioa.css atala*/ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: auto;
+  background: #efefef;
+  font-family: Arial, sans-serif;
+}
+
+.torneoa {
+  padding: 16px 20px 75px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bracket {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(200px, 220px));
+  gap: 40px 79px;
+  align-items: start;
+  justify-content: center;
+  width: min(100%, 150px);
+  margin: 0 auto;
+}
+
+.round-col {
+  display: grid;
+  grid-template-rows: repeat(16, 60px);
+  gap: 15px;
+  align-content: start;
+  justify-items: center;
+}
+
+.round-label {
+  grid-row: 1;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  min-height: 42px;
+}
+
+.round-col .match {
+  grid-column: 1;
+  width: 230px;
+  min-height: 114px;
+  display: grid;
+  grid-template-columns: 1fr 56px;
+  grid-template-rows: auto auto auto;
+  background: #f8f8f8;
+  border: 2px solid #111;
+  box-shadow: 5px 5px  #111;
+}
+
+.round-col:first-child .match:nth-child(2) {
+  grid-row: 2;
+}
+
+.round-col:first-child .match:nth-child(3) {
+  grid-row: 4;
+}
+
+.round-col:first-child .match:nth-child(4) {
+  grid-row: 6;
+}
+
+.round-col:first-child .match:nth-child(5) {
+  grid-row: 8;
+}
+
+.round-col:first-child .match:nth-child(6) {
+  grid-row: 10;
+}
+
+.round-col:first-child .match:nth-child(7) {
+  grid-row: 12;
+}
+
+.round-col:first-child .match:nth-child(8) {
+  grid-row: 14;
+}
+
+.round-col:first-child .match:nth-child(9) {
+  grid-row: 16;
+}
+
+.round-col:nth-child(2) .match:nth-child(2) {
+  grid-row: 3;
+}
+
+.round-col:nth-child(2) .match:nth-child(3) {
+  grid-row: 7;
+}
+
+.round-col:nth-child(2) .match:nth-child(4) {
+  grid-row: 11;
+}
+
+.round-col:nth-child(2) .match:nth-child(5) {
+  grid-row: 15;
+}
+
+.round-col:nth-child(3) .match:nth-child(2) {
+  grid-row: 5;
+}
+
+.round-col:nth-child(3) .match:nth-child(3) {
+  grid-row: 13;
+}
+
+.round-col:nth-child(4) .match:nth-child(2) {
+  grid-row: 9;
+}
+
+.round-col:nth-child(5) .match:nth-child(2) {
+  grid-row: 5;
+}
+
+.round-col:nth-child(5) .match:nth-child(3) {
+  grid-row: 13;
+}
+
+.round-col:nth-child(6) .match:nth-child(2) {
+  grid-row: 3;
+}
+
+.round-col:nth-child(6) .match:nth-child(3) {
+  grid-row: 7;
+}
+
+.round-col:nth-child(6) .match:nth-child(4) {
+  grid-row: 11;
+}
+
+.round-col:nth-child(6) .match:nth-child(5) {
+  grid-row: 15;
+}
+
+.round-col:nth-child(7) .match:nth-child(2) {
+  grid-row: 2;
+}
+
+.round-col:nth-child(7) .match:nth-child(3) {
+  grid-row: 4;
+}
+
+.round-col:nth-child(7) .match:nth-child(4) {
+  grid-row: 6;
+}
+
+.round-col:nth-child(7) .match:nth-child(5) {
+  grid-row: 8;
+}
+
+.round-col:nth-child(7) .match:nth-child(6) {
+  grid-row: 10;
+}
+
+.round-col:nth-child(7) .match:nth-child(7) {
+  grid-row: 12;
+}
+
+.round-col:nth-child(7) .match:nth-child(8) {
+  grid-row: 14;
+}
+
+.round-col:nth-child(7) .match:nth-child(9) {
+  grid-row: 16;
+}
+
+.date {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  text-align: center;
+  padding: 8px 10px;
+  border-bottom: 2px solid #111;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.Jokalari {
+  display: contents;
+}
+
+.Jokalari span:first-child {
+  grid-column: 1;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.75);
+  font-size: 15px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+
+.Jokalari .puntuazioa {
+  grid-column: 2;
+  display: grid;
+  place-items: center;
+  border-left: 1px solid rgba(17, 17, 17, 0.75);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.75);
+  background: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Jokalari:first-of-type span:first-child,
+.Jokalari:first-of-type .puntuazioa {
+  grid-row: 2;
+}
+
+.Jokalari:last-of-type span:first-child,
+.Jokalari:last-of-type .puntuazioa {
+  grid-row: 3;
+}
+
+.final-col {
+  justify-self: center;
+}
