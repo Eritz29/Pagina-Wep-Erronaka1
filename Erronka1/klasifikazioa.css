@@ -1,6 +1,8 @@
-/*plantilla.css klasifikazioa*/
 
-/* Configuración general */
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+   ========================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -16,10 +18,13 @@ body {
     font-family: Arial, sans-serif;
     background-color: #eeeeee;
     min-height: 100vh;
-    overflow-x: hidden;
+    height: auto;
 }
 
-/* Título */
+/* ==========================================
+   TÍTULO Y LOGOTIPO
+   ========================================== */
+
 h1 {
     text-align: left;
     font-size: clamp(30px, 4vw, 65px);
@@ -41,7 +46,10 @@ h1 {
     color: white;
 }
 
-/* Cabecera */
+/* ==========================================
+   CABECERA
+   ========================================== */
+
 header {
     min-height: 100px;
     height: 100px;
@@ -54,7 +62,8 @@ header {
     gap: 15px;
 }
 
-/* Logo de la cabecera */
+/* Logotipo */
+
 header img {
     width: 150px;
     max-width: 20%;
@@ -62,7 +71,10 @@ header img {
     object-fit: contain;
 }
 
-/* Menú de navegación */
+/* ==========================================
+   MENÚ DE NAVEGACIÓN
+   ========================================== */
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -80,18 +92,304 @@ nav a {
     text-decoration: none;
 }
 
-/* Pie de página */
+/* ==========================================
+   CLASIFICACIÓN DEL TORNEO
+   ========================================== */
+
+/* Contenedor principal del torneo */
+
+.torneoa {
+    width: 100%;
+    max-width: none;
+    padding: 20px 10px;
+    margin: 0;
+}
+
+/* Título de la clasificación */
+
+.torneoa h1 {
+    margin: 0 0 25px;
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Las siete columnas del torneo */
+
+.kaxak {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    align-items: start;
+    justify-content: stretch;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: visible;
+}
+
+/* Cada columna de partidos */
+
+.kolumnak {
+    display: grid;
+    grid-template-rows: repeat(16, 42px);
+    gap: 8px;
+    align-content: start;
+    justify-items: stretch;
+    min-width: 0;
+    width: 100%;
+}
+
+/* Nombre de cada fase */
+
+.tabla {
+    grid-row: 1;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 700;
+    min-height: 25px;
+    overflow-wrap: anywhere;
+}
+
+/* Tarjetas de los partidos */
+
+.kolumnak .partidoa {
+    grid-column: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 75px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 28px;
+    grid-template-rows: auto auto auto;
+    background: #f8f8f8;
+    border: 1.5px solid #111111;
+    box-shadow: 2px 2px #111111;
+}
+
+/* ==========================================
+   POSICIÓN DE LOS PARTIDOS
+   ========================================== */
+
+/* Primera columna: ocho partidos */
+
+.kolumnak:first-child .partidoa:nth-child(2) {
+    grid-row: 2;
+}
+
+.kolumnak:first-child .partidoa:nth-child(3) {
+    grid-row: 4;
+}
+
+.kolumnak:first-child .partidoa:nth-child(4) {
+    grid-row: 6;
+}
+
+.kolumnak:first-child .partidoa:nth-child(5) {
+    grid-row: 8;
+}
+
+.kolumnak:first-child .partidoa:nth-child(6) {
+    grid-row: 10;
+}
+
+.kolumnak:first-child .partidoa:nth-child(7) {
+    grid-row: 12;
+}
+
+.kolumnak:first-child .partidoa:nth-child(8) {
+    grid-row: 14;
+}
+
+.kolumnak:first-child .partidoa:nth-child(9) {
+    grid-row: 16;
+}
+
+/* Segunda columna: cuatro partidos */
+
+.kolumnak:nth-child(2) .partidoa:nth-child(2) {
+    grid-row: 3;
+}
+
+.kolumnak:nth-child(2) .partidoa:nth-child(3) {
+    grid-row: 7;
+}
+
+.kolumnak:nth-child(2) .partidoa:nth-child(4) {
+    grid-row: 11;
+}
+
+.kolumnak:nth-child(2) .partidoa:nth-child(5) {
+    grid-row: 15;
+}
+
+/* Tercera columna: dos partidos */
+
+.kolumnak:nth-child(3) .partidoa:nth-child(2) {
+    grid-row: 5;
+}
+
+.kolumnak:nth-child(3) .partidoa:nth-child(3) {
+    grid-row: 13;
+}
+
+/* Cuarta columna: final */
+
+.kolumnak:nth-child(4) .partidoa:nth-child(2) {
+    grid-row: 9;
+}
+
+/* Quinta columna: dos partidos */
+
+.kolumnak:nth-child(5) .partidoa:nth-child(2) {
+    grid-row: 5;
+}
+
+.kolumnak:nth-child(5) .partidoa:nth-child(3) {
+    grid-row: 13;
+}
+
+/* Sexta columna: cuatro partidos */
+
+.kolumnak:nth-child(6) .partidoa:nth-child(2) {
+    grid-row: 3;
+}
+
+.kolumnak:nth-child(6) .partidoa:nth-child(3) {
+    grid-row: 7;
+}
+
+.kolumnak:nth-child(6) .partidoa:nth-child(4) {
+    grid-row: 11;
+}
+
+.kolumnak:nth-child(6) .partidoa:nth-child(5) {
+    grid-row: 15;
+}
+
+/* Séptima columna: ocho partidos */
+
+.kolumnak:nth-child(7) .partidoa:nth-child(2) {
+    grid-row: 2;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(3) {
+    grid-row: 4;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(4) {
+    grid-row: 6;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(5) {
+    grid-row: 8;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(6) {
+    grid-row: 10;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(7) {
+    grid-row: 12;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(8) {
+    grid-row: 14;
+}
+
+.kolumnak:nth-child(7) .partidoa:nth-child(9) {
+    grid-row: 16;
+}
+
+/* ==========================================
+   INFORMACIÓN DE LOS PARTIDOS
+   ========================================== */
+
+/* Fecha del partido */
+
+.data {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    text-align: center;
+    padding: 3px 1px;
+    border-bottom: 1px solid #111111;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    overflow-wrap: anywhere;
+}
+
+/* Contenedor de cada jugador */
+
+.Jokalari {
+    display: contents;
+}
+
+/* Nombre de los jugadores */
+
+.Jokalari span:first-child {
+    grid-column: 1;
+    padding: 3px;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.75);
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Puntuación de los jugadores */
+
+.Jokalari .puntuazioa {
+    grid-column: 2;
+    display: grid;
+    place-items: center;
+    border-left: 1px solid rgba(17, 17, 17, 0.75);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.75);
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Primera fila de jugadores */
+
+.Jokalari:first-of-type span:first-child,
+.Jokalari:first-of-type .puntuazioa {
+    grid-row: 2;
+}
+
+/* Segunda fila de jugadores */
+
+.Jokalari:last-of-type span:first-child,
+.Jokalari:last-of-type .puntuazioa {
+    grid-row: 3;
+}
+
+/* Centrar columnas cuando corresponda */
+
+.kolumna {
+    justify-self: center;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
 footer {
     background-color: #111111;
     color: white;
     padding: 15px 20px 10px;
-    margin-top: 8px;
+    margin-top: 40px;
     border-top: 1px solid #444444;
     border-radius: 8px;
     height: auto;
 }
 
-/* Contenido del pie de página */
+/* Distribución del contenido del pie */
+
 .footer-contenido {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -100,19 +398,13 @@ footer {
     align-items: start;
 }
 
-/* Zona de noticias */
 .zona-noticias {
     min-width: 0;
 }
 
-/* Columnas Explorar e Información */
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-}
+/* Contacto y enlaces */
 
+.footer-contact,
 .footer-enlaces {
     display: flex;
     flex-direction: column;
@@ -120,7 +412,8 @@ footer {
     gap: 6px;
 }
 
-/* Títulos del pie de página */
+/* Títulos del pie */
+
 footer h3 {
     color: white;
     margin-top: 5px;
@@ -128,7 +421,8 @@ footer h3 {
     font-size: 16px;
 }
 
-/* Enlaces del pie de página */
+/* Enlaces del pie */
+
 .footer-contact a,
 .footer-enlaces a {
     color: #eeeeee;
@@ -140,7 +434,8 @@ footer h3 {
     color: #E31837;
 }
 
-/* Campo del correo */
+/* Campo de correo */
+
 .zona-noticias input[type="email"] {
     width: 250px;
     max-width: 100%;
@@ -151,6 +446,7 @@ footer h3 {
 }
 
 /* Botón de suscripción */
+
 .zona-noticias button {
     background-color: #E31837;
     color: white;
@@ -165,7 +461,8 @@ footer h3 {
     background-color: #a80f27;
 }
 
-/* Redes sociales */
+/* Iconos de redes sociales */
+
 .social-icons {
     display: flex;
     flex-wrap: wrap;
@@ -188,7 +485,8 @@ footer h3 {
     opacity: 1;
 }
 
-/* Franja inferior */
+/* Parte final del pie */
+
 .footer-final {
     border-top: 1px solid #555555;
     text-align: center;
@@ -204,309 +502,107 @@ footer h3 {
     color: #eeeeee;
 }
 
-/* Adaptación del pie de página a móviles */
-@media (max-width: 600px) {
+/* ==========================================
+   ADAPTACIÓN A PANTALLAS PEQUEÑAS
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .torneoa {
+        padding: 15px 5px;
+    }
+
+    .torneoa h1 {
+        font-size: 34px;
+    }
+
+    .kaxak {
+        gap: 5px;
+    }
+
+    .tabla {
+        font-size: 12px;
+    }
+
+    .kolumnak .partidoa {
+        grid-template-columns: minmax(0, 1fr) 20px;
+    }
+
+    .data {
+        font-size: 10px;
+    }
+
+    .Jokalari span:first-child {
+        font-size: 11px;
+        padding: 2px;
+    }
+
+    .Jokalari .puntuazioa {
+        font-size: 11px;
+    }
+
     .footer-contenido {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-/* Configuración general */
-* {
-    box-sizing: border-box;
-}
+/* Móviles */
 
-body {
-    margin: 0;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    background-color: #eeeeee;
-}
+@media (max-width: 600px) {
 
-/* Cabecera */
-header {
-    height: 150px;
-    background-color: #aaaaaa;
-    padding: 20px;
-    text-align: right;
-}
+    header {
+        padding: 10px;
+        gap: 5px;
+    }
 
-/* Menú de navegación */
-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #999999;
-    padding: 15px;
-    margin-top: 15px;
-}
+    header img {
+        max-width: 25%;
+    }
 
-nav a {
-    background-color: white;
-    padding: 10px 20px;
-    color: black;
-    text-decoration: none;
-}
+    nav {
+        justify-content: center;
+    }
 
-/* Contenido principal */
-.contenido {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-    padding: 20px;
-    margin-top: 15px;
-    background-color: #bbbbbb;
-}
+    nav a {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
 
-/* Artículos y columnas laterales */
-article,
-aside {
-    padding: 15px;
-    background-color: #999999;
-    min-height: 140px;
-}
+    .torneoa {
+        padding: 15px 2px;
+    }
 
-article p,
-aside p {
-    background-color: #eeeeee;
-    padding: 5px;
-}
+    .torneoa h1 {
+        font-size: 28px;
+    }
 
-/* Pie de página */
-footer {
-    height: 150px;
-    background-color: #aaaaaa;
-    padding: 20px;
-}
-img {
-    max-width: 100%;
-    height: 100px;
-    width: 150px
-}
+    .kaxak {
+        gap: 3px;
+    }
 
-/*klasifikazioa.css atala*/ 
-* {
-  box-sizing: border-box;
-}
+    .tabla {
+        font-size: 10px;
+    }
 
-body {
-  margin: 0;
-  min-height: auto;
-  background: #efefef;
-  font-family: Arial, sans-serif;
-}
+    .kolumnak .partidoa {
+        grid-template-columns: minmax(0, 1fr) 16px;
+    }
 
-.torneoa {
-  padding: 16px 20px 75px;
-}
+    .data {
+        font-size: 8px;
+        padding: 2px 0;
+    }
 
-h1 {
-  margin: 0 0 18px;
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 700;
-  text-align: center;
-}
+    .Jokalari span:first-child {
+        font-size: 9px;
+        padding: 1px;
+    }
 
-.bracket {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(200px, 220px));
-  gap: 40px 79px;
-  align-items: start;
-  justify-content: center;
-  width: min(100%, 150px);
-  margin: 0 auto;
-}
+    .Jokalari .puntuazioa {
+        font-size: 9px;
+    }
 
-.round-col {
-  display: grid;
-  grid-template-rows: repeat(16, 60px);
-  gap: 15px;
-  align-content: start;
-  justify-items: center;
-}
-
-.round-label {
-  grid-row: 1;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 700;
-  min-height: 42px;
-}
-
-.round-col .match {
-  grid-column: 1;
-  width: 230px;
-  min-height: 114px;
-  display: grid;
-  grid-template-columns: 1fr 56px;
-  grid-template-rows: auto auto auto;
-  background: #f8f8f8;
-  border: 2px solid #111;
-  box-shadow: 5px 5px  #111;
-}
-
-.round-col:first-child .match:nth-child(2) {
-  grid-row: 2;
-}
-
-.round-col:first-child .match:nth-child(3) {
-  grid-row: 4;
-}
-
-.round-col:first-child .match:nth-child(4) {
-  grid-row: 6;
-}
-
-.round-col:first-child .match:nth-child(5) {
-  grid-row: 8;
-}
-
-.round-col:first-child .match:nth-child(6) {
-  grid-row: 10;
-}
-
-.round-col:first-child .match:nth-child(7) {
-  grid-row: 12;
-}
-
-.round-col:first-child .match:nth-child(8) {
-  grid-row: 14;
-}
-
-.round-col:first-child .match:nth-child(9) {
-  grid-row: 16;
-}
-
-.round-col:nth-child(2) .match:nth-child(2) {
-  grid-row: 3;
-}
-
-.round-col:nth-child(2) .match:nth-child(3) {
-  grid-row: 7;
-}
-
-.round-col:nth-child(2) .match:nth-child(4) {
-  grid-row: 11;
-}
-
-.round-col:nth-child(2) .match:nth-child(5) {
-  grid-row: 15;
-}
-
-.round-col:nth-child(3) .match:nth-child(2) {
-  grid-row: 5;
-}
-
-.round-col:nth-child(3) .match:nth-child(3) {
-  grid-row: 13;
-}
-
-.round-col:nth-child(4) .match:nth-child(2) {
-  grid-row: 9;
-}
-
-.round-col:nth-child(5) .match:nth-child(2) {
-  grid-row: 5;
-}
-
-.round-col:nth-child(5) .match:nth-child(3) {
-  grid-row: 13;
-}
-
-.round-col:nth-child(6) .match:nth-child(2) {
-  grid-row: 3;
-}
-
-.round-col:nth-child(6) .match:nth-child(3) {
-  grid-row: 7;
-}
-
-.round-col:nth-child(6) .match:nth-child(4) {
-  grid-row: 11;
-}
-
-.round-col:nth-child(6) .match:nth-child(5) {
-  grid-row: 15;
-}
-
-.round-col:nth-child(7) .match:nth-child(2) {
-  grid-row: 2;
-}
-
-.round-col:nth-child(7) .match:nth-child(3) {
-  grid-row: 4;
-}
-
-.round-col:nth-child(7) .match:nth-child(4) {
-  grid-row: 6;
-}
-
-.round-col:nth-child(7) .match:nth-child(5) {
-  grid-row: 8;
-}
-
-.round-col:nth-child(7) .match:nth-child(6) {
-  grid-row: 10;
-}
-
-.round-col:nth-child(7) .match:nth-child(7) {
-  grid-row: 12;
-}
-
-.round-col:nth-child(7) .match:nth-child(8) {
-  grid-row: 14;
-}
-
-.round-col:nth-child(7) .match:nth-child(9) {
-  grid-row: 16;
-}
-
-.date {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  text-align: center;
-  padding: 8px 10px;
-  border-bottom: 2px solid #111;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.Jokalari {
-  display: contents;
-}
-
-.Jokalari span:first-child {
-  grid-column: 1;
-  padding: 10px 12px;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.75);
-  font-size: 15px;
-  line-height: 1.2;
-  display: flex;
-  align-items: center;
-}
-
-.Jokalari .puntuazioa {
-  grid-column: 2;
-  display: grid;
-  place-items: center;
-  border-left: 1px solid rgba(17, 17, 17, 0.75);
-  border-bottom: 1px solid rgba(17, 17, 17, 0.75);
-  background: #fff;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.Jokalari:first-of-type span:first-child,
-.Jokalari:first-of-type .puntuazioa {
-  grid-row: 2;
-}
-
-.Jokalari:last-of-type span:first-child,
-.Jokalari:last-of-type .puntuazioa {
-  grid-row: 3;
-}
-
-.final-col {
-  justify-self: center;
+    .footer-contenido {
+        grid-template-columns: 1fr;
+    }
 }

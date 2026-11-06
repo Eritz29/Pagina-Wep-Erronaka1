@@ -82,27 +82,96 @@ main {
     min-height: 55vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: #0b0c10; /* Fondo general oscuro muy inmersivo estilo gaming */
 }
 
 .contenido {
     display: grid;
-    flex: 1;
     min-height: 55vh;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    padding: 12px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    gap: 20px;
+    padding: 50px 0;
     margin-top: 8px;
-    background-color: #bbbbbb;
+    background-color: transparent;
+    width: 100%;
 }
 
-
+/* 1. EL CONTENEDOR PRINCIPAL (Panel del menú) */
 .grid-container {
     display: grid;
+    background-color: #12141c; /* Fondo carbón oscuro para hacer destacar el contenido */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    max-width: 1200px;
+    grid-auto-rows: min-content;
+    gap: 24px;
+    width: 90%;
     justify-content: center;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 1fr 1fr 2fr;
-    gap: 30px;
+    padding: 40px;
+    border-radius: 12px;
+    /* Borde fino e imperceptible que se iluminará al interactuar */
+    border: 1px solid #1f2330; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Sombra pesada de estilo interfaz */
+    box-sizing: border-box;
+}
+
+/* 2. LAS TARJETAS INDIVIDUALES DEL MENÚ */
+.grid-container > * {
+    display: grid;
+    grid-template-columns: 160px 1fr; /* División Título / Descripción */
+    align-items: center;
+    gap: 24px;
+    
+    background-color: #1a1d29; /* Gris oscuro para las tarjetas */
+    border-left: 4px solid #333644; /* Borde izquierdo sutil (se volverá rojo GameStop) */
+    border-top: 1px solid #24293a;
+    border-right: 1px solid #24293a;
+    border-bottom: 1px solid #24293a;
+    padding: 24px 28px;       
+    border-radius: 0 8px 8px 0; /* Bordes redondeados solo a la derecha */
+    width: 100%; 
+    box-sizing: border-box;  
+    
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* 3. EFECTO INTERACTIVO AL PASAR EL RATÓN (Hover de GameStop) */
+.grid-container > *:hover {
+    background-color: #202433;
+    border-left-color: #FD0000; /* Activación del característico Rojo GameStop */
+    transform: translateX(4px); /* Desplazamiento sutil hacia la derecha al seleccionarlo */
+    box-shadow: -5px 5px 20px rgba(253, 0, 0, 0.08); /* Resplandor rojo muy suave */
+}
+
+/* 4. EL TÍTULO / ENLACE (Lado izquierdo) */
+.grid-container > * > a, 
+.grid-container > * > h3 {
+    font-family: 'Impact', 'Arial Black', system-ui, sans-serif; /* Impact le da esa vibra oficial de GameStop */
+    font-size: 1.3rem;
+    text-transform: uppercase; /* Forzamos mayúsculas tipográficas */
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco puro de alta legibilidad */
+    transition: color 0.2s ease;
+}
+
+/* Al hacer hover en la tarjeta, el título se enciende en Rojo GameStop */
+.grid-container > *:hover > a,
+.grid-container > *:hover > h3 {
+    color: #FD0000; 
+}
+
+/* 5. LA DESCRIPCIÓN (Lado derecho) */
+.grid-container > * > p {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    color: #a0a5b5; /* Gris claro/azulado que contrasta perfectamente en fondos oscuros */
 }
 
 article{
