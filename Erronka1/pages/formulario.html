@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStop e-sports txapelketa - Harremanetarako Formularioa</title>
+    <link rel="stylesheet" href="../style/formulario.css">
+</head>
+<body>
+
+    <header>
+        <h1>
+            <span class="e">E -</span>
+            <span class="sports">SPORTS</span>
+            <span class="Txapelketa">TXAPELKETA</span>
+        </h1>
+        <img src="../argazkiak/GameStop-Logoa.png" alt="GameStop Logoa">
+    </header>
+
+    <nav>
+        <a href="/pages/index.html">Sarrera</a>
+        <a href="/pages/azken-berrien-atala.html">Azken Berrien Atala</a>
+        <a href="/pages/formulario.html">Formularioa</a>
+        <a href="/pages/txapelketa.html">Txapelketa Motak</a>
+        <a href="/pages/parte-hartzaileak.html">Parte Hartzaileak</a>
+        <a href="/pages/klasifikazioa.html">Klasifikazioa</a>
+        <a href="/pages/gaming-espazioa.html">Gaming Espazioa</a>
+        <a href="/pages/bitxikeriak.html">Bitxikeriak</a>
+    </nav>
+
+    <main>
+        <!-- Banner Hero Berria (Formulariorako egokitutako estatistikekin) -->
+        <section class="hero-banner">
+            <div class="hero-container">
+                <div class="hero-edukia">
+                    <span class="hero-badge">IZEN-EMATEA ETA LAGUNTZA</span>
+                    <h2>Harremanetarako Formularioa</h2>
+                    <p>Bete beheko formularioa txapelketan parte hartzeko edo gure taldearekin harremanetan jartzeko!</p>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Laguntza</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">&lt;24h</span>
+                        <span class="stat-label">Erantzuna</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Segurua</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main form egitura -->
+        <div class="form-edukiontzia">
+            <form action="procesar_formulario.php" method="post">
+                <label for="nombre">Izena:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Helbide elektronikoa:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="opcion">Aukeratu eskaera mota:</label>
+                <select id="opcion" name="opcion" required>
+                    <option value="">-- Aukeratu --</option>
+                    <option value="informazioa">Informazioa eskatu</option>
+                    <option value="parte_hartu">Txapelketan parte hartu</option>
+                </select>
+
+                <label for="mensaje">Mezua:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" minlength="10" maxlength="500" required></textarea>
+
+                <input type="submit" value="Bidali">
+            </form>
+        </div>
+    </main>
+
+    <footer id="harremana">
+        <div class="footer-edukia">
+            <div class="berien-enemua">
+                <h3>Ez galdu gure albisteak!</h3>
+                <p>Harpidedun zaitez azken berriak posta elektronikoan jasotzeko.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Sartu zure posta elektronikoa">
+                    <button type="submit" class="btn-subscribe">Harpidedun egin</button>
+                </form>
+
+                <h3>Jarrai gaitzazu sare sozialetan!</h3>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/es/"><img src="/argazkiak/tiktok.jpg" alt="TikTok"></a>
+                    <a href="https://twitter.com/"><img src="/argazkiak/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/"><img src="/argazkiak/instagram.jpg" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/"><img src="/argazkiak/youtube.png" alt="YouTube"></a>
+                    <a href="https://www.twitch.tv/"><img src="/argazkiak/twitch.png" alt="Twitch"></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Arakatu</h3>
+                <a href="/pages/index.html#sarrera">Hasiera</a>
+                <a href="/pages/index.html#baldintzak-arauak">Arauak</a>
+                <a href="/pages/index.html#kokapena">Non eta Noiz</a>
+                <a href="/pages/index.html#motak">Txapelketa Motak</a>
+                <a href="/pages/index.html#sariak">Sariak</a>
+            </div>
+            <div class="footer-enlaces">
+                <h3>Informazioa</h3>
+                <a href="/pages/index.html#baldintzak-arauak">Baldintzak</a>
+                <a href="/pages/index.html#baldintzak-arauak">Puntuazioak</a>
+                <a href="/pages/index.html#izen-ematea">Izen-ematea</a>
+                <a href="/pages/index.html#pribatutasun-politika">Pribatutasun politika</a>
+            </div>
+        </div>
+        <div class="footer-final">
+            <p>&copy; 2024 GameStop e-sports txapelketa. Eskubide guztiak erreserbatuta.</p>
+            <p>Diseinatzailea: <a href="#">1. Taldea</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+/* Konfigurazio orokorra (Base común Página 1) */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background-color: #0a0a0c;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0f12;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    min-height: 90px;
+    background: linear-gradient(180deg, #16181e 0%, #0e0f12 100%);
+    border-bottom: 2px solid #E31837;
+    padding: 10px 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+header h1 {
+    text-align: left;
+    font-size: clamp(28px, 4vw, 55px);
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.e { color: #ffffff; }
+.sports { 
+    color: #E31837; 
+    text-shadow: 0 0 10px rgba(227, 24, 55, 0.6);
+}
+.Txapelketa { color: #cccccc; }
+
+header img {
+    width: 130px;
+    max-width: 20%;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #14161d;
+    padding: 12px;
+    border-bottom: 1px solid #222530;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    background-color: #1f222e;
+    padding: 8px 18px;
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: 1px solid #2e3244;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #E31837;
+    color: #ffffff;
+    border-color: #E31837;
+    box-shadow: 0 0 12px rgba(227, 24, 55, 0.5);
+    transform: translateY(-1px);
+}
+
+
+main {
+    width: 100%;
+}
+
+.bideoa-section {
+    width: 100%;
+    background-color: #000000;
+    margin-bottom: 35px;
+    position: relative;
+    border-bottom: 3px solid #E31837;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.esports-video {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    opacity: 0.45;
+}
+
+.bideoa-gainjartzea {
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    padding: 30px;
+    background: rgba(10, 10, 12, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.bideoa-bereizgarria {
+    background-color: #E31837;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.bideoa-gainjartzea h2 {
+    font-size: clamp(26px, 4.5vw, 42px);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.bideoa-gainjartzea p {
+    font-size: clamp(14px, 2vw, 18px);
+    margin: 0;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.contenido {
+    display: grid;
+    min-height: 55vh;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    padding: 20px 0 40px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-auto-rows: min-content;
+    max-width: 1200px;
+    width: 90%;
+    gap: 25px 35px;
+    justify-content: center;
+    background-color: #14161d;
+    border: 1px solid #222530;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.grid-container h2.titulua {
+    grid-column: 1;
+    margin: 0;
+    padding: 15px 0;
+    font-family: 'Impact', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-bottom: 3px solid #E31837;
+    align-self: start;
+}
+
+.grid-container a {
+    grid-column: 2;
+    margin: 0;
+    background-color: #1a1d27;
+    border: 1px solid #2e3244;
+    border-left: 4px solid #E31837;
+    padding: 20px 24px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #b0b5c0;
+    align-self: center;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.grid-container a:hover {
+    background-color: #1f222e;
+    border-left-color: #ffffff;
+    box-shadow: 0 0 15px rgba(227, 24, 55, 0.2);
+    color: #ffffff;
+}
+
+footer {
+    background-color: #08080a;
+    color: white;
+    padding: 30px 20px 15px;
+    margin-top: 30px;
+    border-top: 2px solid #1f222e;
+}
+
+.footer-edukia {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-contact, .footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+footer h3 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-contact a, .footer-enlaces a {
+    color: #8a90a0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover, .footer-enlaces a:hover {
+    color: #b81d24;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.berien-enemua input[type="email"] {
+    width: 240px;
+    max-width: 100%;
+    padding: 10px 14px;
+    background-color: #14161d;
+    border: 1px solid #2e3244;
+    color: white;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.berien-enemua input[type="email"]:focus {
+    border-color: #b81d24;
+}
+
+.btn-subscribe {
+    background: linear-gradient(135deg, #b81d24 0%, #8c1419 100%);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #d42c34;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.25s ease;
+}
+
+.btn-subscribe:hover {
+    background: linear-gradient(135deg, #d42c34 0%, #b81d24 100%);
+    border-color: #f04850;
+    box-shadow: 0 0 12px rgba(184, 29, 36, 0.5);
+    transform: translateY(-2px);
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0.8);
+    transition: filter 0.2s;
+}
+
+.social-icons a:hover img {
+    filter: brightness(1.2);
+}
+
+.footer-final {
+    border-top: 1px solid #1a1d27;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 11px;
+    color: #555566;
+}
+
+.footer-final a { color: #8a90a0; }
+
